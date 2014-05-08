@@ -6,7 +6,7 @@ Timecop is a Redmine plugin witch constrols issues' worked time.
 
 Timecop is different from native Redmine's time control, because it asks to user the start and the finish date/time.
 
-![alt text](readme-example.png)
+!https://raw.githubusercontent.com/asseinfo/timecop/master/readme-example.png!
 
 h2. Install
 

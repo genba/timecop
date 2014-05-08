@@ -1,0 +1,60 @@
+<div id="worktimes">
+  <hr/>
+
+  <p>
+    <strong>Horas trabalhadas</strong>
+    <a id="add">Adicionar</a>
+  </p>
+
+  <div id="flash"></div>
+  <div id="form"></div>
+
+  <table>
+    <thead>
+      <tr>
+        <th id="actions">&nbsp;</th>
+        <th id="started_at">Início</td>
+        <th id="finished_at">Fim</td>
+        <th id="worker">Trabalhador</td>
+        <th id="workedtime">Tempo trabalhado</td>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4">Tempo total trabalhado</td>
+        <td id="total">0</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <script id="form" type="text/x-template">
+    <div class="box">
+      <fieldset class="tabular">
+        <legend>Alterando hora trabalhada</legend>
+        <br>
+        <p>
+          <label for="worktime_started_at">Início</label>
+          <input id="worktime_started_at" name="worktime[started_at]" maxlength="16" type="text">
+          formato: dd/mm/aaaa hh:mm
+        </p>
+        <p>
+          <label for="worktime_finished_at">Fim</label>
+          <input id="worktime_finished_at" name="worktime[finished_at]" maxlength="16" type="text">
+          formato: dd/mm/aaaa hh:mm
+        </p>
+        <div id="actions">
+          <a id="confirm">Confirmar</a>
+          &nbsp;|&nbsp;
+          <a id="abandon">Abandonar</a>
+        </div>
+      </fieldset>
+    </div>
+  </script>
+</div>
+
+<% content_for :header_tags do %>
+  <%= stylesheet_link_tag 'worktimes', :plugin => 'timecop' %>
+  <%= javascript_include_tag 'worktimes', :plugin => 'timecop' %>
+<% end %>

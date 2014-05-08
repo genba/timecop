@@ -1,0 +1,54 @@
+div#worktimes table {
+  width: 100%;
+  text-align: left;
+}
+
+div#worktimes th#options {
+  width: 5%;
+}
+
+div#worktimes th#started_at {
+  width: 20%;
+}
+
+div#worktimes th#finished_at {
+  width: 20%;
+}
+
+div#worktimes th#worker {
+  width: 40%;
+}
+
+div#worktimes th#workedtime {
+  width: 15%;
+  text-align: right;
+}
+
+div#worktimes td:last-child {
+  text-align: right;
+}
+
+div#worktimes tfoot td {
+  border-top: 1px dashed #e1e1e1;
+}
+
+div#worktimes thead th {
+  border-bottom: 1px dashed #e1e1e1;
+}
+
+div#worktimes tbody tr:hover {
+  background-color: #e1e1e1;
+  color: #000;
+}
+
+div#worktimes a#add {
+  float: right;
+}
+
+div#worktimes a {
+  cursor: pointer;
+}
+
+div#worktimes div#form div#actions{
+  float: right;
+}

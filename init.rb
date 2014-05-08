@@ -1,3 +1,5 @@
+require 'redmine'
+
 Redmine::Plugin.register :timecop do
   name 'Timecop'
   author 'Cezinha Anjos'
@@ -6,3 +8,5 @@ Redmine::Plugin.register :timecop do
   url 'http://github.com/asseinfo/timecop'
   author_url 'http://www.twitter.com/cezinha_anjos'
 end
+
+require 'timecop/hooks/view_issues_show_description_bottom_hook'

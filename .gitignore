@@ -1,0 +1,9 @@
+/.bundle
+/log/*.log
+/tmp
+/public/assets
+/public/system
+/vendor/assets/bower
+.DS_Store
+/.gems
+/coverage

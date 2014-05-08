@@ -1,2 +1,2 @@
-# Plugin's routes
-# See: http://guides.rubyonrails.org/routing.html
+get 'worktimes', :to => 'worktimes#index'
+resource :worktimes, :only => [:create, :update, :destroy]

@@ -11,7 +11,7 @@ class WorktimesController < ApplicationController
         started_at: params[:started_at],
         finished_at: params[:finished_at],
         worker: User.current,
-        issue_id: 1
+        issue_id: params[:issue_id]
       })
 
     worktime.save

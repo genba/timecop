@@ -10,11 +10,27 @@ Timecop is different from native Redmine's time control, because it asks to user
 
 h2. Install
 
-<tt>bundle exec rake redmine:plugins:migrate RAILS_ENV=production</tt>
+Let's suppose your redmine is installed at <tt>/var/www/redmine</tt>.
+
+<pre>
+$ cd /var/www/redmine
+$ cd plugins
+$ git clone https://github.com/asseinfo/timecop.git
+$ bundle exec rake redmine:plugins:migrate RAILS_ENV=production
+</pre>
+
+After this, restart your redmine.
 
 h2. Uninstall
 
-<tt>bundle exec rake redmine:plugins:migrate NAME=timecop VERSION=0 RAILS_ENV=production</tt>
+Let's suppose your redmine is installed at <tt>/var/www/redmine</tt>.
+
+<pre>
+$ cd /var/www/redmine
+$ cd plugins
+$ bundle exec rake redmine:plugins:migrate NAME=timecop VERSION=0 RAILS_ENV=production
+$ rm -rf timecop
+</pre>
 
 h2. Contributing
 

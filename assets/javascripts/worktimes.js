@@ -30,12 +30,16 @@
     jqXHR = $.ajax({
       url: worktimes_url,
       dataType: "JSON",
-      data: {issue_id: 1},
+      data: {issue_id: issueId()},
       type: "GET"
     });
 
     jqXHR.done(renderIndex);
     jqXHR.fail(renderError);
+  }
+
+  function issueId() {
+    return $("div#worktimes").attr("data-issue_id");
   }
 
   function renderIndex(worktimes) {
@@ -109,6 +113,7 @@
       url: worktimes_url,
       dataType: "JSON",
       data: {
+        issue_id: issueId(),
         started_at: started_at,
         finished_at: finished_at
       },

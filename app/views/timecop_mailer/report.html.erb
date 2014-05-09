@@ -1,0 +1,53 @@
+<h1 style="font-size: 3em;">Timecop</h1>
+<br/>
+
+<h2 style="font-size: 2em;">Horas de ontem</h2>
+<br/>
+
+<table style="border: 1px solid #cccccc">
+  <tr>
+    <th style="width: 400px; text-align: left;">Trabalhador</th>
+    <th style="width: 100px; text-align: right;">Horas</th>
+  </tr>
+  <% @yesterday.each do |worktime| %>
+    <tr>
+      <td style="width: 400px; text-align: left;"><%= worktime.worker.firstname %></td>
+      <td style="width: 100px; text-align: right;"><%= readable_time(worktime.sum) %></td>
+    </tr>
+  <% end %>
+</table>
+<br/>
+
+<h2 style="font-size: 2em;">Últimos 7 dias</h2>
+<br/>
+
+<table style="border: 1px solid #cccccc">
+  <tr>
+    <th style="width: 400px; text-align: left;">Trabalhador</th>
+    <th style="width: 100px; text-align: right;">Horas</th>
+  </tr>
+  <% @week.each do |worktime| %>
+    <tr>
+      <td style="width: 400px; text-align: left;"><%= worktime.worker.firstname %></td>
+      <td style="width: 100px; text-align: right;"><%= readable_time(worktime.sum) %></td>
+    </tr>
+  <% end %>
+</table>
+<br/>
+
+<h2 style="font-size: 2em;">Últimos 30 dias</h2>
+<br/>
+
+<table style="border: 1px solid #cccccc">
+  <tr>
+    <th style="width: 400px; text-align: left;">Trabalhador</th>
+    <th style="width: 100px; text-align: right;">Horas</th>
+  </tr>
+  <% @month.each do |worktime| %>
+    <tr>
+      <td style="width: 400px; text-align: left;"><%= worktime.worker.firstname %></td>
+      <td style="width: 100px; text-align: right;"><%= readable_time(worktime.sum) %></td>
+    </tr>
+  <% end %>
+</table>
+<br/>

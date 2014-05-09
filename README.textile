@@ -32,6 +32,29 @@ $ bundle exec rake redmine:plugins:migrate NAME=timecop VERSION=0 RAILS_ENV=prod
 $ rm -rf timecop
 </pre>
 
+h2. Send report by e-mail
+
+Timecop can send a report by e-mail with yesterday, last week and last month time. It can be executed throught a rake task:
+
+<tt>$ bundle exec rake timecop:report["foo@bar.com"] RAILS_ENV=production</tt>
+
+Where foo@bar.com is the recipient mailbox.
+
+h3. Scheduling at crontab
+
+You can schedule the report at crontab. See example above:
+
+<pre>
+$ sudo vim /etc/timecop-report.sh
+cd /var/www/redmine
+bundle exec rake timecop:report["foo@bar.com"] RAILS_ENV=production
+</pre>
+
+<pre>
+$ crontab -e
+55 14 * * * /bin/bash -l /etc/timecop-report.sh
+</pre>
+
 h2. Contributing
 
 We encourage you to contribute to Timecop!
